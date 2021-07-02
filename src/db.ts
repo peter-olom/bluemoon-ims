@@ -18,7 +18,7 @@ export default class Db {
     try {
       const data = await AsyncStorage.getItem(this.key);
       if (data) {
-        // store by most recent timestamp
+        // get by most recent timestamp
         return (JSON.parse(data) as InventoryItem[]).sort(
           (a, b) => b.timestamp - a.timestamp,
         );

@@ -69,7 +69,7 @@ export default function EditItem({
   return (
     <View style={{padding: 10}}>
       <Text style={{marginBottom: 20, paddingLeft: 10}} h4>
-        Edit Item
+        Edit {edit.name}
       </Text>
       <Input
         value={item.name}

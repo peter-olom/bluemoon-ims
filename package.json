@@ -9,6 +9,7 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
   },
+  "author": {"name": "Peter Olom", "email": "ptr.olom@gmail.com"},
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.15.5",
     "@react-native-community/masked-view": "^0.1.11",
@@ -27,6 +28,8 @@
     "@babel/core": "^7.12.9",
     "@babel/runtime": "^7.12.5",
     "@react-native-community/eslint-config": "^2.0.0",
+    "@testing-library/jest-native": "^4.0.1",
+    "@testing-library/react-native": "^7.2.0",
     "@types/jest": "^26.0.23",
     "@types/react-native": "^0.64.5",
     "@types/react-test-renderer": "^16.9.2",
@@ -49,6 +52,18 @@
       "jsx",
       "json",
       "node"
+    ],
+    "setupFiles": [
+      "<rootDir>/__tests__/setup.ts"
+    ],
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-native/extend-expect"
+    ],
+    "testMatch": [
+      "**/*.spec.(tsx|ts)"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!@react-native|react-native|@react-navigation)"
     ]
   }
 }
